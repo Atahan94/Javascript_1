@@ -1,42 +1,59 @@
 <!DOCTYPE html>
-<head>
-    <script>
-        let contacts = 
-        [
-        { 
-         firstName: "Ulaş",
-         lastName: "Ak",
-         phoneNo: 12395175,
-         likes: 1000  
-        },
-        { 
-         firstName: "Samed",
-         lastName: "Tekeli",
-         phoneNo: 951753456,
-         likes: 1500  
-        },
-        { 
-         firstName: "Yigit",
-         lastName: "Göktürk",
-         phoneNo: 456852753,
-         likes: 2000  
-        }
-        ];
-        console.log(check("Samed", "lastName"));
-        function check(name, prop)
-        {
-           
-           for (let i = 0; i < contacts.length; i++)
-           {
-            if(name == contacts[i].firstName)
-            {
-                return contacts[i].hasOwnProperty(prop)?  contacts[i][prop] : "No property found";
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let contacts = 
+            [
+            { 
+             firstName: "Ulaş",
+             lastName: "Ak",
+             phoneNo: 12395175,
+             likes: 1000  
+            },
+            { 
+             firstName: "Samed",
+             lastName: "Tekeli",
+             phoneNo: 951753456,
+             likes: 1500  
+            },
+            { 
+             firstName: "Yigit",
+             lastName: "Göktürk",
+             phoneNo: 456852753,
+             likes: 2000  
+            },
+            { 
+             firstName: "Yigit",
+             lastName: "Göktürk",
+             phoneNo: 456852753,
+             likes: 2000  
+            },
+            { 
+             firstName: "Yigit",
+             lastName: "Göktürk",
+             phoneNo: 456852753,
+             likes: 2000  
             }
-            else if(i == contacts.length - 1)
+            ];
+            console.log(check("Samed", "lastName"));
+            function check(name, prop)
             {
-                return "No such content";
+               
+               for (let i = 0; i < contacts.length; i++)
+               {
+                if(name == contacts[i].firstName)
+                {
+                    return contacts[i].hasOwnProperty(prop)?  contacts[i][prop] : "No property found";
+                }
+                else if(i == contacts.length - 1)
+                {
+                    return "No such content";
+                }
+               }
             }
-           }
-        }
-    </script>
-</head>
+        </script>
+    </body>
+</html>
