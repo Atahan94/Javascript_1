@@ -22,7 +22,7 @@
          likes: 2000  
         }
         ];
-        console.log(check("Samed", "firstName"));
+        console.log(check("Samed", "lastName"));
         function check(name, prop)
         {
            
@@ -30,15 +30,7 @@
            {
             if(name == contacts[i].firstName)
             {
-                if(contacts[i].hasOwnProperty(prop))
-                {
-                    return contacts[i][prop];
-                }
-                else
-                {
-                    return "No property found"
-                }
-                
+                return contacts[i].hasOwnProperty(prop)?  contacts[i][prop] : "No property found";
             }
             else if(i == contacts.length - 1)
             {
